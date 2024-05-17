@@ -42,7 +42,7 @@ stages:
         containerRegistry: '$(dockerRegistryServiceConnection)'
         repository: '$(imageRepository)'
         command: 'buildAndPush'
-        Dockerfile: 'app/Dockerfile'
+        Dockerfile: '$(dockerfilePath)'
         tags: '$(tag)'
 
     - upload: manifests
