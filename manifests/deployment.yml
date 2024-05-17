@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: moniquerapidoc 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: moniquerapidoc
+  template:
+    metadata:
+      labels:
+        app: moniquerapidoc 
+    spec:
+      containers:
+        - name: moniquerapidoc 
+          image: mycontainerregistryus.azurecr.io/moniquerapidoc
+          ports:
+          - containerPort: 80
