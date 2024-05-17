@@ -14,7 +14,7 @@ variables:
   dockerRegistryServiceConnection: 'e223be3b-5016-4472-ad00-249646420bf7'
   imageRepository: 'moniquerapidoc'
   containerRegistry: 'mycontainerregistryus.azurecr.io'
-  dockerfilePath: '$(dockerfilePath)'
+  dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'mycontainerregistryus206988fa-auth'
 
